@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5476467842.js" crossorigin="anonymous"></script>
+  <title>Shopping Cart with Search</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <section class="searchBar">
+    <input id="js--searchBar" type="text" placeholder="Search for a product here..." class="searchBar__input">
+    <i class="fa-solid fa-magnifying-glass searchBar__glass"></i>
+  </section>
+  <section id="js--checkoutWindow" class="checkout a-popup">
+    <button id="js--checkoutButton">
+      <i id="js--arrowIcon" class="fa-solid fa-angles-left"></i>
+    </button>
+    <ul class="checkout_list">
+      <li class="checkout_listitem">
+        <img src="img/BKD-pet-handtekening.webp" alt="" class="checkout_img">
+        <p class="checkouts_title">buzz lightyear</p>
+        <p id="js--amount-buzz" class="checkout_amount"></p>
+        <p id="js--amount-buzz-total" class="checkout_amount-total"></p>
+      </li>
+      <li class="checkout_listitem">
+        <img src="img/ironman.webp" alt="pandora sieraad van iron man" class="checkout_img">
+        <p class="checkouts_title">iron man</p>
+        <p id="js--amount-ironman" class="checkout_amount"></p>
+        <p id="js--amount-ironman-total" class="checkout_amount-total"></p>
+      </li>
+      <li class="checkout_listitem">
+        <img src="img/c3po.webp" alt="pandora sieraad van C3PO" class="checkout_img">
+        <p class="checkouts_title">C3PO</p>
+        <p id="js--amount-c3po" class="checkout_amount"></p>
+        <p id="js--amount-c3po-total" class="checkout_amount-total"></p>
+      </li>
+      <li class="checkout_listitem">
+        <img src="img/r2d2.webp" alt="pandora sieraad van R2D2" class="checkout_img">
+        <p class="checkouts_title">R2D2</p>
+        <p id="js--amount-r2d2" class="checkout_amount"></p>
+        <p id="js--amount-r2d2-total" class="checkout_amount-total"></p>
+      </li>
+      <li class="checkout_listitem">
+        <img src="img/darthvader.webp" alt="pandora sieraad van Darth Vader" class="checkout_img">
+        <p class="checkouts_title">Darth Vader</p>
+        <p id="js--amount-darth-vader" class="checkout_amount"></p>
+        <p id="js--amount-darth-vader-total" class="checkout_amount-total"></p>
+      </li>
+    </ul>
+  </section>
+    <article class="modal a-popup" id="js--shoppingModal">
+      &#10003; Added to Cart
+    </article>
+  <button id="js--checkoutbutton" class="shoppinCart">
+    <i id="js--cartIcon" class="fa-solid fa-cart-shopping"></i>
+    <div class="shoppinCart_message">0</div>
+  </button>
+  <main>
+    <ul class="game">
+      <li data-title="BUZZ LIGHTYEAR-PIXAR" class="games_game a-popup">
+        <figure class="games_figure">
+          <img src="img/buzzlightyear.webp" alt="pandora sieraad van buzz lightyear" class="games_img">
+        </figure>
+        <section class="games_body">
+          <h2 class="games_h2">€49</h2>
+          <h3 class="games_h3">Buzz Lightyear - Pixar</h3>
+          <div class="games_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <button data-product="buzz" class="games_button">add to cart</button>
+        </section>
+      </li>
+      <li data-title="IRON MAN-MARVEL" class="games_game a-popup">
+        <figure class="games_figure">
+          <img src="img/ironman.webp" alt="pandora sieraad van iron man" class="games_img">
+        </figure>
+        <section class="games_body">
+          <h2 class="games_h2">€39</h2>
+          <h3 class="games_h3">Iron Man - Marvel</h3>
+          <div class="games_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <button data-product="iron" class="games_button">add to cart</button>
+        </section>
+      </li>
+      <li data-title="C3PO-STAR WARS" class="games_game a-popup games_game--third">
+        <figure class="games_figure">
+          <img src="img/c3po.webp" alt="pandora sieraad van C3PO" class="games_img">
+        </figure>
+        <section class="games_body">
+          <h2 class="games_h2">€49</h2>
+          <h3 class="games_h3">C3PO - Star Wars</h3>
+          <div class="games_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <button data-product="c3po" class="games_button">add to cart</button>
+        </section>
+      </li>
+      <li data-title="R2D2-STAR WARS" class="games_game a-popup games_game--fourth">
+        <figure class="games_figure">
+          <img src="img/r2d2.webp" alt="pandora sieraad van R2D2" class="games_img">
+        </figure>
+        <section class="games_body">
+          <h2 class="games_h2">€69</h2>
+          <h3 class="games_h3">R2D2 - Star Wars</h3>
+          <div class="games_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <button data-product="r2d2" class="games_button">add to cart</button>
+        </section>
+      </li>
+      <li data-title="DARTH VADER-STAR WARS" class="games_game a-popup games_game--fifth">
+        <figure class="games_figure">
+          <img src="img/darthvader.webp" alt="pandora sieraad van Darth Vader" class="games_img">
+        </figure>
+        <section class="games_body">
+          <h2 class="games_h2">€59</h2>
+          <h3 class="games_h3">Darth Vader - Star Wars</h3>
+          <div class="games_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <button data-product="darth" class="games_button">add to cart</button>
+        </section>
+      </li>
+    </ul>
+  </main>
+
+</body>
+
+</html>
